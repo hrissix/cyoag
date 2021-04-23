@@ -1,13 +1,17 @@
+//declaring the text and option-buttons constants
 const textElement = document.getElementById('text')
 const optionButtonsElement = document.getElementById('option-buttons')
 
+//states were not used
 let state = {}
 
+//function to start the game
 function startGame() {
   state = {}
   showTextNode(1)
 }
 
+//function to show the text dialog
 function showTextNode(textNodeIndex) {
   const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
   textElement.innerText = textNode.text
@@ -15,6 +19,7 @@ function showTextNode(textNodeIndex) {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild)
   }
 
+  //if statement that creates a new button if there are more than 4 options included
   textNode.options.forEach(option =>{
     if (showOption(option)){
       const button = document.createElement('button')
@@ -30,6 +35,8 @@ function showOption(option){
   return   option.requiredState == null || option.requiredState(state)
 }
 
+//function that selects the chosen option by the player
+//if the id of the textNode is less or equal to 0 the game is restarted.
 function selectOption(option) {
   const nextTextNodeId = option.nextText
   if (nextTextNodeId <= 0) {
@@ -39,6 +46,8 @@ function selectOption(option) {
   showTextNode(nextTextNodeId)
 }
 
+//cases are used to present the options, depending on what the player chose, 
+//the option leads to a different path, new case
 const textNodes = [
   {
     id: 1,
