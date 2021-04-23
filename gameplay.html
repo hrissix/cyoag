@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Night at Hollow Mansion </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- linking stylesheet -->
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen">
+    <style>
+      /* *, *::before, *::after{
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      } */
+
+      body {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+      }
+
+      button {
+            background-color: #2E5F63;
+            border: 2px solid #2E5F63;
+            color: #F29863 ;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            border-radius: 5%;
+            transition: 0.3s;
+            font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+            font-style: bold ;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #F29863;
+          }
+
+      button:hover {
+            color: #F29863;
+            background-color: #2E5F63;
+            border: 2px solid #F29863;
+          }
+
+      .container2 {
+        width: 800px;
+        max-width: 80%;
+        background-color: #BFAC88;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+      }
+
+      .btn-grid{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 10px;
+        margin: 20px;
+
+      }
+
+    </style>
+  </head>
+
+  <body>
+  <header>
+    <div class="topnav" id="myTopnav">
+      <a href="index.html">Home</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </header>
+
+  <script>
+  /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+  <!-- <div style="width:100%; height: 200px;"></div> -->
+  <div class="container2">
+    <div id="text" style="padding: 20px; text-align: justify; line-height: 1.5;">Text</div>
+    <div id="option-buttons" class="btn-grid">
+      <button class="btn">Option 1</button>
+      <button class="btn">Option 2</button>
+      <button class="btn">Option 3</button>
+      <button class="btn">Option 4</button>
+
+    </div>
+  </div>
+  <script type="text/javascript" defer src="gameplay.js"></script>
+
+  <footer>
+        <a href="https://bg-bg.facebook.com/" class="fa fa-facebook"></a>
+        <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+        <a href="https://twitter.com/" class="fa fa-twitter"></a>
+        <a href="https://www.youtube.com/?gl=BG&hl=bg" class="fa fa-youtube"></a>
+  </footer>
+
+  </body>
+
+</html>
